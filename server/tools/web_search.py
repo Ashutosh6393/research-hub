@@ -22,11 +22,10 @@ def web_search(query: str) -> str:
     for r in results['results']:
         out.append(f'"Title": {r['title']}, \n"URL": {r['url']}, \n"Snippet": {r['content'][:300]}"')
 
+    print(out)
+
     return "\n----\n.".join(out)
 
-
-
-print(web_search.invoke("what are the recent news on the stock market?"))
 
 
 
